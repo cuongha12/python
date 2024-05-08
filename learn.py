@@ -54,7 +54,7 @@ def getAll(conn):
         print("---------DANH SÁCH SINH VIÊN------------")
         print("{:<15} {:>15} {:>25}".format("Mã sinh viên", "Tên", "Ngày sinh"))
         for e in result:
-            print("{:<15} {:>15} {:>25}".format(e[0],e[1],e[2].strftime("%d/%m/%Y")))
+            print("{:<15} {:>25} {:>25}".format(e[0],e[1],e[2].strftime("%d/%m/%Y")))
     except mysql.connector.Error as e:
          print(f"Lỗi khi chèn bản ghi: {e}")
     finally:
@@ -117,3 +117,5 @@ def main():
         else:
             print("Lựa chọn không hợp lệ. Vui lòng nhập lại.")
 main()
+
+# pip install mysql-connector-python
